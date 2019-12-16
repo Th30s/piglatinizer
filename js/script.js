@@ -5,15 +5,24 @@ $( "document" ).ready(function() { //this helps your jQuery to work. Write all o
         let words = sentence.split(" ");
 
         function firstCharacter(string){
+        string = string.toLowerCase();
         let suffix = string.substring(0,1);
         return suffix + "ay";
         }
 
         function everthingElse (string){
+        string = string.toLowerCase();
         let letters= string.length
         let suffix = string.substring(1,letters);
         return suffix;
         }
+
+        function piglatinized (first, allElse){
+        $(".output").text("everthingElse()" + "firstCharacter()")
+        };
+
+        console.log(firstCharacter('Turtle').toLowerCase());
+        console.log(everthingElse('Turtle').toLowerCase());
     });
 });
 
